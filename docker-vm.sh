@@ -245,6 +245,9 @@ if ! command -v virt-customize &>/dev/null; then
 fi
 
 msg_info "Adding Docker and Docker Compose Plugin to Debian 13 Qcow2 Disk Image"
+
+virt-customize -q -a "${FILE}" --run-command "echo 'nameserver 8.8.8.8' > /etc/resolv.conf" >/dev/null
+
 virt-customize -q -a "${FILE}" --install qemu-guest-agent,apt-transport-https,ca-certificates,curl,gnupg,software-properties-common,lsb-release >/dev/null &&
   virt-customize -q -a "${FILE}" --run-command "mkdir -p /etc/apt/keyrings && curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg" >/dev/null &&
   virt-customize -q -a "${FILE}" --run-command "echo 'deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian trixie stable' > /etc/apt/sources.list.d/docker.list" >/dev/null &&
