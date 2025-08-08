@@ -1,6 +1,6 @@
 # Proxmox Docker VM Setup Script
 
-This repository provides a script to automatically create a Docker-ready virtual machine on **Proxmox VE**, based on **Debian 12 Cloud Image**.  
+This repository provides a script to automatically create a Docker-ready virtual machine on **Proxmox VE**, based on **Debian 13 Cloud Image**.  
 The VM includes Docker CE and Docker Compose, properly pre-installed and configured.
 
 ---
