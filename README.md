@@ -8,7 +8,7 @@ The VM includes Docker CE and Docker Compose, properly pre-installed and configu
 ## ✨ Features
 
 - 🐳 Docker CE + Compose pre-installed
-- 📦 Uses official **Debian 12 nocloud qcow2 image**
+- 📦 Uses official **Debian 13 nocloud qcow2 image**
 - 🔁 Automatically resizes disk to your specified size
 - ⚡ Fast creation via `virt-customize` and `qm` tooling
 - 🧰 Clean and local – no telemetry or branding
