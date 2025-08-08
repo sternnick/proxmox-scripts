@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 set -e
 
+# Based on: https://github.com/community-scripts/ProxmoxVE
+# Original Authors: thost96, michelroegl-brunner
+# Modified by: sternnick (https://github.com/sternnick)
+# License: MIT
+
 # === ΠΡΟΕΤΟΙΜΑΣΙΑ ===
 VMID=$(pvesh get /cluster/nextid)
 DISK_SIZE="10G"
